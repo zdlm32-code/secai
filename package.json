@@ -1,0 +1,25 @@
+{
+  "name": "secai-study-mcp",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "secai-study": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "web": "node build/web-server.js",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "express": "^5.2.1",
+    "ollama": "^0.6.3",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}

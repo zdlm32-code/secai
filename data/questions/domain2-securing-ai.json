@@ -1,0 +1,422 @@
+[
+  {
+    "id": "sec-001",
+    "domain": "securing-ai",
+    "topic": "Adversarial attacks (evasion, poisoning, extraction)",
+    "difficulty": "intermediate",
+    "question": "An attacker subtly modifies training data to cause a machine learning model to misclassify specific inputs during inference. Which type of attack does this describe?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Evasion attack"
+      },
+      {
+        "label": "B",
+        "text": "Data poisoning attack"
+      },
+      {
+        "label": "C",
+        "text": "Model extraction attack"
+      },
+      {
+        "label": "D",
+        "text": "Membership inference attack"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Data poisoning attacks manipulate training data to influence model behavior. Unlike evasion attacks (which modify inputs at inference time), poisoning occurs during the training phase.",
+    "source": "seed"
+  },
+  {
+    "id": "sec-002",
+    "domain": "securing-ai",
+    "topic": "Prompt injection and jailbreaking",
+    "difficulty": "intermediate",
+    "question": "An attacker crafts input that causes an LLM-powered chatbot to ignore its system instructions and reveal its internal prompt. What type of attack is this?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "SQL injection"
+      },
+      {
+        "label": "B",
+        "text": "Cross-site scripting"
+      },
+      {
+        "label": "C",
+        "text": "Prompt injection"
+      },
+      {
+        "label": "D",
+        "text": "Buffer overflow"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Prompt injection manipulates LLM inputs to override system instructions, extract hidden prompts, or alter model behavior. It is analogous to SQL injection but targets natural language interfaces.",
+    "source": "seed"
+  },
+  {
+    "id": "sec-003",
+    "domain": "securing-ai",
+    "topic": "Model security and access controls",
+    "difficulty": "intermediate",
+    "question": "Which control is MOST effective at preventing unauthorized access to a deployed ML model's API?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Input validation only"
+      },
+      {
+        "label": "B",
+        "text": "API authentication with rate limiting"
+      },
+      {
+        "label": "C",
+        "text": "Model obfuscation"
+      },
+      {
+        "label": "D",
+        "text": "Network segmentation alone"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "API authentication verifies the identity of callers while rate limiting prevents abuse and model extraction attempts. Together they provide the most effective access control for model APIs.",
+    "source": "seed"
+  },
+  {
+    "id": "sec-004",
+    "domain": "securing-ai",
+    "topic": "Adversarial attacks (evasion, poisoning, extraction)",
+    "difficulty": "advanced",
+    "question": "An attacker queries a production ML model thousands of times with carefully crafted inputs to build a functionally equivalent copy. What attack is this?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Model inversion attack"
+      },
+      {
+        "label": "B",
+        "text": "Membership inference attack"
+      },
+      {
+        "label": "C",
+        "text": "Model extraction (stealing) attack"
+      },
+      {
+        "label": "D",
+        "text": "Backdoor attack"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Model extraction attacks use repeated queries to approximate the target model's decision boundary, creating a functionally equivalent 'stolen' model. Rate limiting and query monitoring are key defenses.",
+    "source": "seed"
+  },
+  {
+    "id": "sec-005",
+    "domain": "securing-ai",
+    "topic": "Data protection for AI systems",
+    "difficulty": "intermediate",
+    "question": "Which technique adds calibrated noise to training data to protect individual privacy while maintaining model utility?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Data masking"
+      },
+      {
+        "label": "B",
+        "text": "Differential privacy"
+      },
+      {
+        "label": "C",
+        "text": "Data encryption at rest"
+      },
+      {
+        "label": "D",
+        "text": "Tokenization"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Differential privacy adds mathematically calibrated noise to data or model parameters, providing provable privacy guarantees that no individual record can be identified while preserving statistical utility.",
+    "source": "seed"
+  },
+  {
+    "id": "sec-006",
+    "domain": "securing-ai",
+    "topic": "Supply chain security for AI/ML",
+    "difficulty": "intermediate",
+    "question": "A development team downloads a pre-trained model from a public repository. What is the PRIMARY supply chain security concern?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "The model may have high latency"
+      },
+      {
+        "label": "B",
+        "text": "The model may contain embedded backdoors or malicious code"
+      },
+      {
+        "label": "C",
+        "text": "The model may not be accurate enough"
+      },
+      {
+        "label": "D",
+        "text": "The model may use too much memory"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Pre-trained models from untrusted sources may contain trojans, backdoors, or serialized malicious code (e.g., pickle deserialization attacks). Supply chain integrity verification is essential.",
+    "source": "seed"
+  },
+  {
+    "id": "sec-007",
+    "domain": "securing-ai",
+    "topic": "AI infrastructure security",
+    "difficulty": "advanced",
+    "question": "Which of the following is the MOST critical security measure for protecting GPU clusters used for ML training?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Physical security of the data center"
+      },
+      {
+        "label": "B",
+        "text": "Network isolation with strict access controls and encrypted communication"
+      },
+      {
+        "label": "C",
+        "text": "Regular firmware updates for GPUs"
+      },
+      {
+        "label": "D",
+        "text": "Using only open-source training frameworks"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Network isolation prevents unauthorized access to training infrastructure and data. Combined with strict access controls and encrypted communication, it protects against data exfiltration and model theft.",
+    "source": "seed"
+  },
+  {
+    "id": "sec-008",
+    "domain": "securing-ai",
+    "topic": "Adversarial attacks (evasion, poisoning, extraction)",
+    "difficulty": "beginner",
+    "question": "An attacker adds imperceptible noise to an image to cause a malware classifier to label malware as benign. What type of attack is this?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Data poisoning"
+      },
+      {
+        "label": "B",
+        "text": "Evasion attack"
+      },
+      {
+        "label": "C",
+        "text": "Model extraction"
+      },
+      {
+        "label": "D",
+        "text": "Denial of service"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Evasion attacks modify inputs at inference time to cause misclassification. The attacker doesn't change the model itself \u2014 they craft inputs designed to fool the model's decision boundary.",
+    "source": "seed"
+  },
+  {
+    "id": "sec-009",
+    "domain": "securing-ai",
+    "topic": "Secure AI development lifecycle",
+    "difficulty": "intermediate",
+    "question": "At which stage of the AI development lifecycle should threat modeling FIRST be performed?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "During model deployment"
+      },
+      {
+        "label": "B",
+        "text": "After the first security incident"
+      },
+      {
+        "label": "C",
+        "text": "During the design and planning phase"
+      },
+      {
+        "label": "D",
+        "text": "During model evaluation"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Threat modeling should begin in the design phase to identify potential attack vectors, trust boundaries, and security requirements before development begins \u2014 following a shift-left security approach.",
+    "source": "seed"
+  },
+  {
+    "id": "sec-010",
+    "domain": "securing-ai",
+    "topic": "Red teaming AI systems",
+    "difficulty": "advanced",
+    "question": "What is the PRIMARY objective of red teaming an AI system before production deployment?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "To improve model accuracy on benchmark datasets"
+      },
+      {
+        "label": "B",
+        "text": "To discover failure modes, biases, and security vulnerabilities through adversarial testing"
+      },
+      {
+        "label": "C",
+        "text": "To reduce the model's inference latency"
+      },
+      {
+        "label": "D",
+        "text": "To create documentation for compliance auditors"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "AI red teaming probes for failure modes, adversarial vulnerabilities, harmful outputs, and biases that standard testing might miss. It provides a realistic assessment of the system's security posture.",
+    "source": "seed"
+  },
+  {
+    "id": "sec-011",
+    "domain": "securing-ai",
+    "topic": "Prompt injection and jailbreaking",
+    "difficulty": "advanced",
+    "question": "Which defense mechanism is MOST effective against indirect prompt injection attacks?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Increasing the model's temperature parameter"
+      },
+      {
+        "label": "B",
+        "text": "Separating and sanitizing data plane inputs from control plane instructions"
+      },
+      {
+        "label": "C",
+        "text": "Using a larger model with more parameters"
+      },
+      {
+        "label": "D",
+        "text": "Adding a disclaimer to the system prompt"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Indirect prompt injection occurs when untrusted data (emails, web pages) is processed alongside system instructions. Separating data and control planes \u2014 similar to parameterized queries for SQL injection \u2014 is the most robust defense.",
+    "source": "seed"
+  },
+  {
+    "id": "sec-012",
+    "domain": "securing-ai",
+    "topic": "AI vulnerability management",
+    "difficulty": "intermediate",
+    "question": "Which framework specifically catalogs vulnerabilities and failure modes unique to AI/ML systems?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "OWASP Top 10 for Web Applications"
+      },
+      {
+        "label": "B",
+        "text": "MITRE ATLAS (Adversarial Threat Landscape for AI Systems)"
+      },
+      {
+        "label": "C",
+        "text": "NIST Cybersecurity Framework"
+      },
+      {
+        "label": "D",
+        "text": "ISO 27001"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "MITRE ATLAS is specifically designed to catalog adversarial threats, techniques, and case studies targeting AI/ML systems. It extends the MITRE ATT&CK framework to the AI domain.",
+    "source": "seed"
+  },
+  {
+    "id": "sec-013",
+    "domain": "securing-ai",
+    "topic": "Data protection for AI systems",
+    "difficulty": "advanced",
+    "question": "Which technique allows multiple organizations to collaboratively train an ML model without sharing their raw data?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Transfer learning"
+      },
+      {
+        "label": "B",
+        "text": "Federated learning"
+      },
+      {
+        "label": "C",
+        "text": "Active learning"
+      },
+      {
+        "label": "D",
+        "text": "Ensemble learning"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Federated learning trains a shared model across decentralized devices/organizations. Only model updates (gradients) are shared \u2014 raw data never leaves each participant's environment, preserving data privacy.",
+    "source": "seed"
+  },
+  {
+    "id": "sec-014",
+    "domain": "securing-ai",
+    "topic": "AI threat landscape",
+    "difficulty": "beginner",
+    "question": "Which of the following represents a NEW threat category introduced by AI systems that did not exist in traditional cybersecurity?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Phishing attacks"
+      },
+      {
+        "label": "B",
+        "text": "Adversarial examples that fool ML classifiers"
+      },
+      {
+        "label": "C",
+        "text": "Denial of service attacks"
+      },
+      {
+        "label": "D",
+        "text": "Man-in-the-middle attacks"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Adversarial examples \u2014 inputs specifically crafted to fool ML models \u2014 are a threat category unique to AI systems. Traditional attacks like phishing, DoS, and MITM predate AI deployment.",
+    "source": "seed"
+  },
+  {
+    "id": "sec-015",
+    "domain": "securing-ai",
+    "topic": "Supply chain security for AI/ML",
+    "difficulty": "advanced",
+    "question": "A company discovers that a third-party dataset used to train their fraud detection model contained deliberately mislabeled transactions. What type of supply chain attack occurred?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Dependency confusion"
+      },
+      {
+        "label": "B",
+        "text": "Training data supply chain poisoning"
+      },
+      {
+        "label": "C",
+        "text": "Typosquatting"
+      },
+      {
+        "label": "D",
+        "text": "Code injection"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Training data supply chain poisoning occurs when an adversary compromises third-party data sources used for model training. Deliberately mislabeled data causes the model to learn incorrect decision boundaries.",
+    "source": "seed"
+  }
+]

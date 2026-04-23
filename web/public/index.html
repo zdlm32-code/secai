@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecAI+ Study Lab</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>SecAI+ <span class="accent">Study Lab</span></h1>
+      <p class="subtitle">CompTIA SecurityAI+ (CY0-001) Exam Prep</p>
+    </div>
+  </header>
+
+  <nav>
+    <button class="tab active" data-tab="dashboard">Dashboard</button>
+    <button class="tab" data-tab="quiz">Quiz</button>
+    <button class="tab" data-tab="flashcards">Flashcards</button>
+    <button class="tab" data-tab="progress">Progress</button>
+    <button class="tab" data-tab="resources">Resources</button>
+    <button class="tab" data-tab="transcripts">Transcripts</button>
+    <button class="tab" data-tab="docs">Docs</button>
+  </nav>
+
+  <!-- ==================== DASHBOARD ==================== -->
+  <main id="dashboard" class="panel active">
+    <div class="dashboard-grid">
+      <div class="card stat-card">
+        <div class="stat-number" id="dash-total-questions">—</div>
+        <div class="stat-label">Seed Questions</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-number" id="dash-sessions">—</div>
+        <div class="stat-label">Study Sessions</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-number" id="dash-avg-score">—</div>
+        <div class="stat-label">Average Score</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-number" id="dash-readiness">—</div>
+        <div class="stat-label">Est. Exam Score</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Exam Domains</h2>
+      <div class="domain-bars" id="dash-domains"></div>
+    </div>
+
+    <div class="card">
+      <h2>Quick Start</h2>
+      <div class="quick-actions">
+        <button onclick="startQuickQuiz('basic-ai')" class="action-btn domain-1">
+          <span class="action-icon">1</span>
+          Basic AI Concepts <span class="badge">17%</span>
+        </button>
+        <button onclick="startQuickQuiz('securing-ai')" class="action-btn domain-2">
+          <span class="action-icon">2</span>
+          Securing AI Systems <span class="badge">40%</span>
+        </button>
+        <button onclick="startQuickQuiz('ai-security')" class="action-btn domain-3">
+          <span class="action-icon">3</span>
+          AI-Assisted Security <span class="badge">24%</span>
+        </button>
+        <button onclick="startQuickQuiz('ai-grc')" class="action-btn domain-4">
+          <span class="action-icon">4</span>
+          AI Governance, Risk & Compliance <span class="badge">19%</span>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================== QUIZ ==================== -->
+  <main id="quiz" class="panel">
+    <!-- Quiz Setup -->
+    <div id="quiz-setup" class="card">
+      <h2>Configure Quiz</h2>
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="quiz-domain">Domain</label>
+          <select id="quiz-domain">
+            <option value="all">All Domains</option>
+            <option value="basic-ai">1.0 Basic AI Concepts (17%)</option>
+            <option value="securing-ai">2.0 Securing AI Systems (40%)</option>
+            <option value="ai-security">3.0 AI-Assisted Security (24%)</option>
+            <option value="ai-grc">4.0 AI GRC (19%)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="quiz-count">Questions</label>
+          <select id="quiz-count">
+            <option value="5">5 Questions</option>
+            <option value="10" selected>10 Questions</option>
+            <option value="15">15 Questions</option>
+            <option value="20">20 Questions</option>
+            <option value="45">All Available</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="quiz-difficulty">Difficulty</label>
+          <select id="quiz-difficulty">
+            <option value="all" selected>All Levels</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+        </div>
+      </div>
+      <button id="start-quiz-btn" class="btn primary" onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <!-- Quiz In Progress -->
+    <div id="quiz-active" class="hidden">
+      <div class="quiz-header">
+        <div class="quiz-progress-bar">
+          <div id="quiz-progress-fill" class="progress-fill"></div>
+        </div>
+        <div class="quiz-meta">
+          <span id="quiz-counter">Question 1 of 10</span>
+          <span id="quiz-score-live">Score: 0/0</span>
+        </div>
+      </div>
+
+      <div class="card question-card">
+        <div class="question-badge" id="question-badge">Domain 1 — Beginner</div>
+        <h3 id="question-text"></h3>
+        <div id="choices-container" class="choices"></div>
+        <div id="explanation-box" class="explanation hidden">
+          <strong id="explanation-verdict"></strong>
+          <p id="explanation-text"></p>
+        </div>
+        <div class="question-actions">
+          <button id="submit-answer-btn" class="btn primary" onclick="submitAnswer()" disabled>Submit Answer</button>
+          <button id="next-question-btn" class="btn secondary hidden" onclick="nextQuestion()">Next Question</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quiz Results -->
+    <div id="quiz-results" class="hidden">
+      <div class="card results-card">
+        <div class="results-header">
+          <div class="results-score-circle" id="results-circle">
+            <span id="results-percentage">0%</span>
+          </div>
+          <div>
+            <h2>Quiz Complete</h2>
+            <p id="results-summary"></p>
+          </div>
+        </div>
+
+        <div class="results-domains" id="results-domains"></div>
+
+        <div class="results-review" id="results-review"></div>
+
+        <div class="results-actions">
+          <button class="btn primary" onclick="startQuiz()">Retake Quiz</button>
+          <button class="btn secondary" onclick="switchTab('progress')">View Progress</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================== FLASHCARDS ==================== -->
+  <main id="flashcards" class="panel">
+    <!-- Controls -->
+    <div class="card fc-controls">
+      <div class="fc-controls-row">
+        <div class="form-group">
+          <label for="fc-domain">Domain</label>
+          <select id="fc-domain" onchange="loadFlashcards()">
+            <option value="all">All Domains</option>
+            <option value="basic-ai">1.0 Basic AI Concepts</option>
+            <option value="securing-ai">2.0 Securing AI Systems</option>
+            <option value="ai-security">3.0 AI-Assisted Security</option>
+            <option value="ai-grc">4.0 AI GRC</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="fc-filter">Filter</label>
+          <select id="fc-filter" onchange="applyFlashcardFilter()">
+            <option value="all">All Cards</option>
+            <option value="review">Needs Review</option>
+            <option value="known">Known</option>
+            <option value="unseen">Unseen</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>&nbsp;</label>
+          <button class="btn primary" onclick="startStudyMode()">Study Mode</button>
+        </div>
+      </div>
+      <div class="fc-stats" id="fc-stats"></div>
+    </div>
+
+    <!-- Study Mode -->
+    <div id="fc-study" class="hidden">
+      <div class="fc-study-header">
+        <div class="quiz-progress-bar">
+          <div id="fc-progress-fill" class="progress-fill"></div>
+        </div>
+        <div class="fc-study-meta">
+          <span id="fc-study-counter">Card 1 of 10</span>
+          <span id="fc-study-score">Known: 0 | Review: 0</span>
+        </div>
+      </div>
+      <div class="fc-card-container" id="fc-card-container" onclick="flipCard()">
+        <div class="fc-card" id="fc-card">
+          <div class="fc-card-front">
+            <div class="fc-card-label">TERM</div>
+            <div class="fc-card-text" id="fc-card-term"></div>
+            <div class="fc-card-hint">Click to flip</div>
+          </div>
+          <div class="fc-card-back">
+            <div class="fc-card-label">DEFINITION</div>
+            <div class="fc-card-text" id="fc-card-def"></div>
+            <div class="fc-card-topic" id="fc-card-topic"></div>
+          </div>
+        </div>
+      </div>
+      <div class="fc-actions">
+        <button class="btn fc-btn-review" onclick="markCard('review')">Needs Review</button>
+        <button class="btn fc-btn-known" onclick="markCard('known')">Got It</button>
+      </div>
+      <div class="fc-study-actions">
+        <button class="btn secondary" onclick="exitStudyMode()">Exit Study</button>
+      </div>
+    </div>
+
+    <!-- Browse List -->
+    <div id="fc-browse" class="card">
+      <h2>All Flashcards</h2>
+      <div id="fc-list"></div>
+    </div>
+  </main>
+
+  <!-- ==================== PROGRESS ==================== -->
+  <main id="progress" class="panel">
+    <div class="card">
+      <div class="progress-header-row">
+        <h2>Study Progress</h2>
+        <button class="btn danger small" onclick="resetProgress()">Reset All</button>
+      </div>
+      <div id="progress-empty" class="empty-state">
+        <p>No study sessions yet. Take a quiz to start tracking!</p>
+      </div>
+      <div id="progress-content" class="hidden">
+        <div class="progress-overview" id="progress-overview"></div>
+        <h3>Domain Breakdown</h3>
+        <div id="progress-domains"></div>
+        <h3>Session History</h3>
+        <div class="session-table-wrap">
+          <table class="session-table" id="session-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Domain</th>
+                <th>Topic</th>
+                <th>Score</th>
+                <th>Questions</th>
+              </tr>
+            </thead>
+            <tbody id="session-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================== RESOURCES ==================== -->
+  <main id="resources" class="panel">
+    <div class="card">
+      <h2>Study Resources Checklist</h2>
+      <p class="muted">Track which resources you've reviewed. Sources marked with a green tag were used to build the question bank.</p>
+      <div id="resources-list"></div>
+    </div>
+  </main>
+
+  <!-- ==================== TRANSCRIPTS ==================== -->
+  <main id="transcripts" class="panel">
+    <div class="card">
+      <h2>Add Course Transcript</h2>
+      <p class="muted">Paste a lesson transcript from your Udemy course. It will be saved locally and used as context for generating higher-quality quiz questions.</p>
+      <div class="form-grid" style="margin-top:1rem">
+        <div class="form-group">
+          <label for="tx-title">Lesson Title</label>
+          <input type="text" id="tx-title" placeholder="e.g., Introduction to Adversarial Attacks" class="text-input">
+        </div>
+        <div class="form-group">
+          <label for="tx-domain">Domain</label>
+          <select id="tx-domain">
+            <option value="general">General / Multiple</option>
+            <option value="basic-ai">1.0 Basic AI Concepts</option>
+            <option value="securing-ai">2.0 Securing AI Systems</option>
+            <option value="ai-security">3.0 AI-Assisted Security</option>
+            <option value="ai-grc">4.0 AI GRC</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="tx-module">Module / Section</label>
+          <input type="text" id="tx-module" placeholder="e.g., Module 3, Lesson 2" class="text-input">
+        </div>
+      </div>
+      <div class="form-group" style="margin-top:0.75rem">
+        <label for="tx-text">Transcript Text</label>
+        <textarea id="tx-text" rows="10" placeholder="Paste the lesson transcript here..." class="text-input textarea"></textarea>
+      </div>
+      <div class="tx-actions">
+        <button class="btn primary" onclick="saveTranscript()">Save Transcript</button>
+        <span id="tx-status" class="tx-status"></span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="progress-header-row">
+        <h2>Process Transcripts with Local AI</h2>
+        <button class="btn primary" onclick="startProcessing()" id="tx-process-btn">Process All</button>
+      </div>
+      <p class="muted">Run a local Gemma agent over your transcripts to automatically generate exam questions and flashcards. Already-processed transcripts are skipped — only new ones are processed when you run again.</p>
+      <div id="tx-summary" class="tx-summary"></div>
+      <div id="tx-processing" class="tx-processing hidden">
+        <div class="quiz-progress-bar">
+          <div id="tx-progress-fill" class="progress-fill"></div>
+        </div>
+        <div class="tx-processing-status">
+          <span id="tx-processing-text">Processing...</span>
+          <span id="tx-processing-count">0 / 0</span>
+        </div>
+        <div id="tx-processing-current" class="muted"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Saved Transcripts</h2>
+      <div id="tx-empty" class="empty-state">
+        <p>No transcripts saved yet. Paste your first lesson above!</p>
+      </div>
+      <div id="tx-list"></div>
+    </div>
+  </main>
+
+  <!-- ==================== DOCS ==================== -->
+  <main id="docs" class="panel">
+    <div class="card docs-card">
+      <div id="docs-content">Loading documentation...</div>
+    </div>
+  </main>
+
+  <footer>
+    <p>SecAI+ Study Lab &mdash; Powered by Ollama + Gemma (local AI) &mdash; Built with Claude Code</p>
+    <p class="muted">CompTIA SecAI+ (CY0-001) &bull; 60 questions &bull; 90 min &bull; 600/900 passing</p>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

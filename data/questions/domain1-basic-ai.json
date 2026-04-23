@@ -1,0 +1,282 @@
+[
+  {
+    "id": "bai-001",
+    "domain": "basic-ai",
+    "topic": "Machine learning fundamentals",
+    "difficulty": "beginner",
+    "question": "Which type of machine learning uses labeled training data to make predictions?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Unsupervised learning"
+      },
+      {
+        "label": "B",
+        "text": "Supervised learning"
+      },
+      {
+        "label": "C",
+        "text": "Reinforcement learning"
+      },
+      {
+        "label": "D",
+        "text": "Transfer learning"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Supervised learning uses labeled datasets where the desired output is known during training, allowing the model to learn the mapping between inputs and outputs.",
+    "source": "seed"
+  },
+  {
+    "id": "bai-002",
+    "domain": "basic-ai",
+    "topic": "Neural networks and deep learning",
+    "difficulty": "intermediate",
+    "question": "What is the primary advantage of deep learning over traditional machine learning for cybersecurity applications?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "It requires less computational power"
+      },
+      {
+        "label": "B",
+        "text": "It can automatically extract features from raw data without manual feature engineering"
+      },
+      {
+        "label": "C",
+        "text": "It always produces more accurate results"
+      },
+      {
+        "label": "D",
+        "text": "It does not require any training data"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Deep learning's key advantage is automatic feature extraction \u2014 it learns hierarchical representations directly from raw data, eliminating the need for manual feature engineering that traditional ML requires.",
+    "source": "seed"
+  },
+  {
+    "id": "bai-003",
+    "domain": "basic-ai",
+    "topic": "Natural language processing",
+    "difficulty": "intermediate",
+    "question": "A security team wants to automatically categorize phishing emails by attack type. Which NLP technique is most appropriate?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Named entity recognition (NER)"
+      },
+      {
+        "label": "B",
+        "text": "Text classification"
+      },
+      {
+        "label": "C",
+        "text": "Machine translation"
+      },
+      {
+        "label": "D",
+        "text": "Text summarization"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Text classification assigns predefined categories to text documents. Categorizing phishing emails by attack type (credential theft, malware delivery, BEC, etc.) is a classification task.",
+    "source": "seed"
+  },
+  {
+    "id": "bai-004",
+    "domain": "basic-ai",
+    "topic": "Generative AI and LLMs",
+    "difficulty": "intermediate",
+    "question": "Which of the following is a security risk specific to large language models (LLMs) deployed in enterprise environments?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "SQL injection attacks"
+      },
+      {
+        "label": "B",
+        "text": "Training data memorization leading to sensitive data leakage"
+      },
+      {
+        "label": "C",
+        "text": "Buffer overflow vulnerabilities"
+      },
+      {
+        "label": "D",
+        "text": "Cross-site scripting (XSS)"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "LLMs can memorize portions of their training data and inadvertently reproduce sensitive information (PII, credentials, proprietary data) during inference, creating a unique data leakage risk.",
+    "source": "seed"
+  },
+  {
+    "id": "bai-005",
+    "domain": "basic-ai",
+    "topic": "AI/ML pipeline stages",
+    "difficulty": "beginner",
+    "question": "What is the correct order of stages in a typical machine learning pipeline?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Training \u2192 Data collection \u2192 Deployment \u2192 Evaluation"
+      },
+      {
+        "label": "B",
+        "text": "Data collection \u2192 Preprocessing \u2192 Training \u2192 Evaluation \u2192 Deployment"
+      },
+      {
+        "label": "C",
+        "text": "Deployment \u2192 Training \u2192 Data collection \u2192 Evaluation"
+      },
+      {
+        "label": "D",
+        "text": "Preprocessing \u2192 Data collection \u2192 Evaluation \u2192 Training"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The standard ML pipeline follows: data collection, preprocessing/cleaning, model training, evaluation/validation, and finally deployment to production.",
+    "source": "seed"
+  },
+  {
+    "id": "bai-006",
+    "domain": "basic-ai",
+    "topic": "Training data and datasets",
+    "difficulty": "intermediate",
+    "question": "An AI model trained to detect network intrusions performs well on the training set but poorly on new network traffic. What is this problem called?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Underfitting"
+      },
+      {
+        "label": "B",
+        "text": "Data poisoning"
+      },
+      {
+        "label": "C",
+        "text": "Overfitting"
+      },
+      {
+        "label": "D",
+        "text": "Concept drift"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Overfitting occurs when a model learns the training data too well, including noise and specifics, causing it to perform poorly on unseen data. This is a common issue when training data isn't representative.",
+    "source": "seed"
+  },
+  {
+    "id": "bai-007",
+    "domain": "basic-ai",
+    "topic": "Model types and architectures",
+    "difficulty": "advanced",
+    "question": "Which model architecture is most commonly used for detecting anomalies in sequential log data for security monitoring?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Convolutional Neural Network (CNN)"
+      },
+      {
+        "label": "B",
+        "text": "Recurrent Neural Network (RNN) / LSTM"
+      },
+      {
+        "label": "C",
+        "text": "Generative Adversarial Network (GAN)"
+      },
+      {
+        "label": "D",
+        "text": "K-Nearest Neighbors (KNN)"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "RNNs and LSTMs are designed for sequential data, making them ideal for analyzing time-series log data where the order and temporal patterns of events are critical for detecting anomalies.",
+    "source": "seed"
+  },
+  {
+    "id": "bai-008",
+    "domain": "basic-ai",
+    "topic": "Machine learning fundamentals",
+    "difficulty": "intermediate",
+    "question": "A cybersecurity team uses clustering to group similar malware samples without pre-existing labels. What type of learning is this?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Supervised learning"
+      },
+      {
+        "label": "B",
+        "text": "Semi-supervised learning"
+      },
+      {
+        "label": "C",
+        "text": "Unsupervised learning"
+      },
+      {
+        "label": "D",
+        "text": "Reinforcement learning"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Unsupervised learning discovers patterns in unlabeled data. Clustering groups similar data points together without predefined categories, making it suitable for grouping unknown malware variants.",
+    "source": "seed"
+  },
+  {
+    "id": "bai-009",
+    "domain": "basic-ai",
+    "topic": "Generative AI and LLMs",
+    "difficulty": "beginner",
+    "question": "What does the term 'hallucination' refer to in the context of large language models?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "The model generating confident but factually incorrect information"
+      },
+      {
+        "label": "B",
+        "text": "The model processing visual inputs incorrectly"
+      },
+      {
+        "label": "C",
+        "text": "A type of adversarial attack against the model"
+      },
+      {
+        "label": "D",
+        "text": "The model running out of memory during inference"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "LLM hallucinations occur when the model generates plausible-sounding but factually incorrect or fabricated information. This is a significant concern when using LLMs for security decision-making.",
+    "source": "seed"
+  },
+  {
+    "id": "bai-010",
+    "domain": "basic-ai",
+    "topic": "AI/ML pipeline stages",
+    "difficulty": "advanced",
+    "question": "During which phase of the ML pipeline is feature engineering MOST critical for building an effective intrusion detection system?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Model deployment"
+      },
+      {
+        "label": "B",
+        "text": "Data preprocessing"
+      },
+      {
+        "label": "C",
+        "text": "Model evaluation"
+      },
+      {
+        "label": "D",
+        "text": "Hyperparameter tuning"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Feature engineering occurs during data preprocessing. For IDS, selecting and transforming the right features (packet sizes, connection durations, protocol flags) from raw network data is critical to model effectiveness.",
+    "source": "seed"
+  }
+]

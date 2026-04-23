@@ -1,0 +1,11 @@
+node_modules/
+build/
+
+# Personal study data (not shared)
+data/transcripts/
+data/progress.json
+data/resource-state.json
+data/flashcard-review.json
+
+# Claude Code local config
+.claude/

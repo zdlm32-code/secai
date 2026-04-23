@@ -1,0 +1,282 @@
+[
+  {
+    "id": "grc-001",
+    "domain": "ai-grc",
+    "topic": "AI regulatory frameworks (GDPR, NIST AI RMF)",
+    "difficulty": "intermediate",
+    "question": "Which framework provides a structured approach to managing risks throughout the AI system lifecycle and was developed by NIST?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "MITRE ATT&CK"
+      },
+      {
+        "label": "B",
+        "text": "NIST AI Risk Management Framework (AI RMF)"
+      },
+      {
+        "label": "C",
+        "text": "ISO 27001"
+      },
+      {
+        "label": "D",
+        "text": "OWASP Top 10"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The NIST AI RMF provides organizations with a voluntary framework to manage AI risks across the full lifecycle. It includes functions like Govern, Map, Measure, and Manage for systematic risk management.",
+    "source": "seed"
+  },
+  {
+    "id": "grc-002",
+    "domain": "ai-grc",
+    "topic": "AI ethics and responsible use",
+    "difficulty": "beginner",
+    "question": "Which principle requires that AI systems can explain their decisions in understandable terms?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Confidentiality"
+      },
+      {
+        "label": "B",
+        "text": "Explainability"
+      },
+      {
+        "label": "C",
+        "text": "Scalability"
+      },
+      {
+        "label": "D",
+        "text": "Efficiency"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Explainability (or interpretability) requires that AI decisions can be understood and explained to stakeholders. This is essential for trust, accountability, and regulatory compliance.",
+    "source": "seed"
+  },
+  {
+    "id": "grc-003",
+    "domain": "ai-grc",
+    "topic": "AI bias and fairness",
+    "difficulty": "intermediate",
+    "question": "An AI-powered hiring tool consistently ranks candidates from certain demographic groups lower. What type of bias is this MOST likely an example of?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Confirmation bias"
+      },
+      {
+        "label": "B",
+        "text": "Historical bias in training data reflecting past discrimination"
+      },
+      {
+        "label": "C",
+        "text": "Anchoring bias"
+      },
+      {
+        "label": "D",
+        "text": "Availability bias"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Historical bias occurs when training data reflects past societal discrimination. If historical hiring data favored certain groups, the model learns and perpetuates those biased patterns.",
+    "source": "seed"
+  },
+  {
+    "id": "grc-004",
+    "domain": "ai-grc",
+    "topic": "AI risk assessment",
+    "difficulty": "intermediate",
+    "question": "According to AI risk management best practices, which factor should be assessed FIRST when evaluating an AI system's risk level?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "The model's accuracy on test data"
+      },
+      {
+        "label": "B",
+        "text": "The potential impact on individuals and the severity of harm if the system fails"
+      },
+      {
+        "label": "C",
+        "text": "The cost of the AI infrastructure"
+      },
+      {
+        "label": "D",
+        "text": "The number of users"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Impact assessment \u2014 evaluating potential harm to individuals, groups, and society \u2014 should be the first step in AI risk assessment. Higher-impact systems require more rigorous risk controls.",
+    "source": "seed"
+  },
+  {
+    "id": "grc-005",
+    "domain": "ai-grc",
+    "topic": "AI transparency and explainability",
+    "difficulty": "advanced",
+    "question": "Which technique helps explain individual predictions of a black-box ML model by approximating it locally with an interpretable model?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "LIME (Local Interpretable Model-agnostic Explanations)"
+      },
+      {
+        "label": "B",
+        "text": "Gradient descent"
+      },
+      {
+        "label": "C",
+        "text": "Principal Component Analysis"
+      },
+      {
+        "label": "D",
+        "text": "Cross-validation"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "LIME explains individual predictions by perturbing input features and fitting a simple interpretable model (like linear regression) locally around the prediction, revealing which features drove the decision.",
+    "source": "seed"
+  },
+  {
+    "id": "grc-006",
+    "domain": "ai-grc",
+    "topic": "AI audit and compliance",
+    "difficulty": "intermediate",
+    "question": "What should an AI audit PRIMARILY evaluate?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Only the model's prediction accuracy"
+      },
+      {
+        "label": "B",
+        "text": "The entire AI lifecycle including data sourcing, model development, deployment, monitoring, and governance"
+      },
+      {
+        "label": "C",
+        "text": "Only the financial cost of the AI system"
+      },
+      {
+        "label": "D",
+        "text": "Only the technical infrastructure"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "A comprehensive AI audit evaluates the entire lifecycle \u2014 from data provenance and model development practices to deployment controls, ongoing monitoring, and governance processes \u2014 not just model performance.",
+    "source": "seed"
+  },
+  {
+    "id": "grc-007",
+    "domain": "ai-grc",
+    "topic": "AI policy development",
+    "difficulty": "beginner",
+    "question": "Which of the following should be included in an organization's AI acceptable use policy?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Only the technical specifications of approved models"
+      },
+      {
+        "label": "B",
+        "text": "Guidelines for appropriate AI use cases, prohibited uses, data handling, and accountability"
+      },
+      {
+        "label": "C",
+        "text": "Only the pricing of AI services"
+      },
+      {
+        "label": "D",
+        "text": "Only the names of approved AI vendors"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "An AI acceptable use policy should cover approved/prohibited use cases, data handling requirements, human oversight expectations, accountability assignments, and incident reporting procedures.",
+    "source": "seed"
+  },
+  {
+    "id": "grc-008",
+    "domain": "ai-grc",
+    "topic": "AI regulatory frameworks (GDPR, NIST AI RMF)",
+    "difficulty": "advanced",
+    "question": "Under the EU AI Act's risk-based classification, which category would an AI system used for real-time biometric surveillance in public spaces fall under?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Minimal risk"
+      },
+      {
+        "label": "B",
+        "text": "Limited risk"
+      },
+      {
+        "label": "C",
+        "text": "High risk"
+      },
+      {
+        "label": "D",
+        "text": "Unacceptable risk (prohibited)"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "The EU AI Act generally prohibits real-time biometric identification in public spaces (with narrow exceptions for law enforcement). This falls under 'unacceptable risk' \u2014 the most restricted category.",
+    "source": "seed"
+  },
+  {
+    "id": "grc-009",
+    "domain": "ai-grc",
+    "topic": "AI ethics and responsible use",
+    "difficulty": "intermediate",
+    "question": "What does the principle of 'human-in-the-loop' mean for AI governance?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "AI systems must be trained exclusively by humans"
+      },
+      {
+        "label": "B",
+        "text": "Humans must maintain meaningful oversight and the ability to intervene in AI decisions"
+      },
+      {
+        "label": "C",
+        "text": "Only humans should operate computer systems"
+      },
+      {
+        "label": "D",
+        "text": "AI systems should mimic human decision-making exactly"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Human-in-the-loop requires that humans retain meaningful oversight, can understand AI recommendations, and have the ability to override or intervene in automated decisions, especially for high-stakes outcomes.",
+    "source": "seed"
+  },
+  {
+    "id": "grc-010",
+    "domain": "ai-grc",
+    "topic": "AI risk assessment",
+    "difficulty": "advanced",
+    "question": "Which concept describes the degradation of AI model performance over time as real-world data distributions change?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Model overfitting"
+      },
+      {
+        "label": "B",
+        "text": "Concept drift"
+      },
+      {
+        "label": "C",
+        "text": "Gradient vanishing"
+      },
+      {
+        "label": "D",
+        "text": "Feature leakage"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Concept drift occurs when the statistical properties of the data the model was trained on change over time, causing model performance to degrade. Continuous monitoring and retraining strategies are essential.",
+    "source": "seed"
+  }
+]

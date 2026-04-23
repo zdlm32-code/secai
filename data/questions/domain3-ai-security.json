@@ -1,0 +1,282 @@
+[
+  {
+    "id": "ais-001",
+    "domain": "ai-security",
+    "topic": "AI for threat detection",
+    "difficulty": "intermediate",
+    "question": "Which AI technique is BEST suited for detecting previously unknown (zero-day) threats based on behavioral anomalies?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Signature-based detection with ML classification"
+      },
+      {
+        "label": "B",
+        "text": "Unsupervised anomaly detection"
+      },
+      {
+        "label": "C",
+        "text": "Rule-based expert systems"
+      },
+      {
+        "label": "D",
+        "text": "Supervised classification with known malware labels"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Unsupervised anomaly detection identifies deviations from normal behavior without requiring labels for known threats. This makes it effective for zero-day detection where no prior signatures exist.",
+    "source": "seed"
+  },
+  {
+    "id": "ais-002",
+    "domain": "ai-security",
+    "topic": "AI-powered SOC operations",
+    "difficulty": "intermediate",
+    "question": "How does AI PRIMARILY improve SOC analyst productivity?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "By replacing all human analysts"
+      },
+      {
+        "label": "B",
+        "text": "By automating alert triage and reducing false positive investigation time"
+      },
+      {
+        "label": "C",
+        "text": "By eliminating the need for SIEM systems"
+      },
+      {
+        "label": "D",
+        "text": "By generating compliance reports"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "AI reduces alert fatigue by automatically triaging, correlating, and prioritizing alerts, allowing analysts to focus on genuine threats rather than investigating the majority of alerts that are false positives.",
+    "source": "seed"
+  },
+  {
+    "id": "ais-003",
+    "domain": "ai-security",
+    "topic": "Automated incident response",
+    "difficulty": "intermediate",
+    "question": "An organization implements a SOAR platform with AI-driven playbooks. What is the PRIMARY risk of fully automating incident response actions?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Increased licensing costs"
+      },
+      {
+        "label": "B",
+        "text": "Automated actions may execute on false positives, causing business disruption"
+      },
+      {
+        "label": "C",
+        "text": "The AI may become sentient"
+      },
+      {
+        "label": "D",
+        "text": "The playbooks cannot be updated"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Fully automated responses (blocking IPs, isolating hosts) triggered by false positives can disrupt legitimate business operations. A human-in-the-loop approach for high-impact actions mitigates this risk.",
+    "source": "seed"
+  },
+  {
+    "id": "ais-004",
+    "domain": "ai-security",
+    "topic": "AI in vulnerability management",
+    "difficulty": "beginner",
+    "question": "How can AI improve vulnerability prioritization?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "By patching all vulnerabilities simultaneously"
+      },
+      {
+        "label": "B",
+        "text": "By predicting which vulnerabilities are most likely to be exploited based on contextual factors"
+      },
+      {
+        "label": "C",
+        "text": "By eliminating the need for vulnerability scanning"
+      },
+      {
+        "label": "D",
+        "text": "By reducing the total number of CVEs published"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "AI models can analyze exploit likelihood, asset criticality, network exposure, and threat intelligence to prioritize vulnerabilities that pose the greatest actual risk, beyond just CVSS scores.",
+    "source": "seed"
+  },
+  {
+    "id": "ais-005",
+    "domain": "ai-security",
+    "topic": "AI for malware analysis",
+    "difficulty": "advanced",
+    "question": "Which approach allows AI to analyze malware behavior without executing it in a sandbox?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Dynamic analysis"
+      },
+      {
+        "label": "B",
+        "text": "Static analysis using ML on binary features (opcode sequences, imports, strings)"
+      },
+      {
+        "label": "C",
+        "text": "Network traffic replay"
+      },
+      {
+        "label": "D",
+        "text": "Manual reverse engineering"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "ML-based static analysis extracts features from binaries (opcode patterns, API imports, string entropy) to classify malware without execution. This is faster and avoids anti-sandbox evasion techniques.",
+    "source": "seed"
+  },
+  {
+    "id": "ais-006",
+    "domain": "ai-security",
+    "topic": "AI-driven threat intelligence",
+    "difficulty": "intermediate",
+    "question": "What is the PRIMARY benefit of using NLP for threat intelligence processing?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "It eliminates the need for threat intelligence feeds"
+      },
+      {
+        "label": "B",
+        "text": "It can automatically extract IOCs and TTPs from unstructured reports at scale"
+      },
+      {
+        "label": "C",
+        "text": "It makes all threat intelligence classified"
+      },
+      {
+        "label": "D",
+        "text": "It replaces the need for CTI analysts"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "NLP can parse thousands of unstructured threat reports, blogs, and advisories to automatically extract indicators of compromise (IOCs) and tactics/techniques/procedures (TTPs) at a scale impossible for manual analysis.",
+    "source": "seed"
+  },
+  {
+    "id": "ais-007",
+    "domain": "ai-security",
+    "topic": "AI for identity and access management",
+    "difficulty": "intermediate",
+    "question": "Which AI capability is MOST useful for detecting compromised user accounts?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Image recognition for facial authentication"
+      },
+      {
+        "label": "B",
+        "text": "User and entity behavior analytics (UEBA) that baselines normal activity patterns"
+      },
+      {
+        "label": "C",
+        "text": "Chatbots for password reset"
+      },
+      {
+        "label": "D",
+        "text": "Automated password rotation"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "UEBA establishes behavioral baselines for each user and detects deviations (unusual login times, locations, data access patterns) that may indicate account compromise, even when credentials are valid.",
+    "source": "seed"
+  },
+  {
+    "id": "ais-008",
+    "domain": "ai-security",
+    "topic": "AI for threat detection",
+    "difficulty": "advanced",
+    "question": "A security team's AI threat detection model has a 99% accuracy rate but generates hundreds of false positives daily. What metric should they focus on improving?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Recall (sensitivity)"
+      },
+      {
+        "label": "B",
+        "text": "Precision (positive predictive value)"
+      },
+      {
+        "label": "C",
+        "text": "Overall accuracy"
+      },
+      {
+        "label": "D",
+        "text": "F2 score"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Precision measures the proportion of positive predictions that are actually correct. High false positives indicate low precision. Improving precision reduces alert fatigue while maintaining detection capability.",
+    "source": "seed"
+  },
+  {
+    "id": "ais-009",
+    "domain": "ai-security",
+    "topic": "AI-powered SOC operations",
+    "difficulty": "beginner",
+    "question": "What does SOAR stand for in the context of AI-enhanced security operations?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Security Orchestration, Automation, and Response"
+      },
+      {
+        "label": "B",
+        "text": "System Operations and Automated Remediation"
+      },
+      {
+        "label": "C",
+        "text": "Security Operations and Risk Assessment"
+      },
+      {
+        "label": "D",
+        "text": "Standardized Operations, Alerting, and Reporting"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "SOAR (Security Orchestration, Automation, and Response) platforms integrate with security tools to automate repetitive tasks, orchestrate workflows, and streamline incident response in SOC environments.",
+    "source": "seed"
+  },
+  {
+    "id": "ais-010",
+    "domain": "ai-security",
+    "topic": "Automated incident response",
+    "difficulty": "advanced",
+    "question": "Which approach BEST balances automation speed with safety in AI-driven incident response?",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Fully automated response for all alert types"
+      },
+      {
+        "label": "B",
+        "text": "Tiered automation: auto-respond to low-risk alerts, require human approval for high-impact actions"
+      },
+      {
+        "label": "C",
+        "text": "Manual review of every alert before any action"
+      },
+      {
+        "label": "D",
+        "text": "Only automate reporting, never automate remediation"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "A tiered approach auto-remediates routine, low-risk events (e.g., blocking known malicious IPs) while requiring human approval for high-impact actions (e.g., isolating production servers), balancing speed and safety.",
+    "source": "seed"
+  }
+]

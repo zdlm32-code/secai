@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "secai-study": {
+      "command": "node",
+      "args": ["/Users/elitrevino/Documents/ollama/build/index.js"]
+    }
+  }
+}
